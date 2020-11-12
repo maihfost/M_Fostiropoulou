@@ -1,0 +1,10 @@
+com/mycompany/chesstournament/chessTournament.class
+Interfaces/IPlayer.class
+models/Game.class
+models/Player.class
+models/Clock.class
+Interfaces/IGame.class
+models/Tournament.class
+Interfaces/ITournament.class
+Interfaces/IClock.class
+models/Naming.class
