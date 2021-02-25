@@ -1,2 +1,1 @@
-# bootcamp
-hello bootcamp
+All BootCamp Educational Projects
