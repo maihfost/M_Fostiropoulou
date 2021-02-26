@@ -1,0 +1,8 @@
+models\Data.class
+models\Student.class
+models\Assignment.class
+models\Naming.class
+models\Course.class
+models\MusicSchool.class
+Main\Main.class
+models\Trainer.class

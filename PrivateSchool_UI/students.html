@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private School</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h2>PRIVATE SCHOOL</h2>
+        <h4><span id=notbold>Education Is Your Future, Get What You Deserve!</span></h4>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>    
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <hr>
+        <aside >
+            <button class="tabbox" name="adds" onclick="openform('addstudent','editstudent',true)">Add<br>Student</button>
+            <button class="tabbox" name="edits" onclick="openform('addstudent','editstudent',false)" id="change_margin">Edit/Update<br>Student</button>
+        </aside>
+        <section class="bg_img">
+
+            <div id="addstudent" class="tabcontent">
+                    <form method="POST">
+                        <label>Name*<span id="f" class="valid">(3-15 letters)</span><span id="f1" class="valid">(Only letters allowed)</span><input type="text" name="stname" id="sn" placeholder="Ioannis" required></label>
+                        <br><label>Lastname*<span id="g" class="valid">(4-15 letters)</span><span id="g1" class="valid">(Only letters allowed)</span><input type="text" name="stlastname" id="lsn" placeholder="Papadopoulos" required></label>
+                        <br><label>Date of Birth*<input type="date" name="dob" id="dt" required></label>
+                        <br><label>Course(s) to Enroll</label>
+                        <br><label class="st" >Maths-Analysis<input type="checkbox"  name="ch_math1"  ></label>
+                        <label class="st">Biology-Anatomy<input type="checkbox"  name="ch_biology1" ></label>
+                        <label class="st">History-Ancient Years<input type="checkbox" name="ch_history1" ></label>
+                    </form>
+                    <br><button type="submit" class="button0" onclick="submited()" >Submit</button>
+            </div>
+
+            <div id="editstudent" class="tabcontent">
+                Select a Student:
+                <select name="selStudent" id="sStudent" onchange="check('sStudent')" required>
+                    <option value="1">Malvina Karali</option>
+                    <option value="2">Tzeni Karezi</option>
+                    <option value="3">Nikos Gkatsos</option>
+                    <option value="4">Manos Xatzidakis</option>
+                    <option value="5">Lizeta Kalimeri</option>
+                    <option value="6">Aris Chatzistefanou</option>
+                </select>
+
+                <form method="POST" name="form4" id="form_edistudent">
+                    <label>Name*<span id="h" class="valid1">(3-15 letters)</span><span id="h1" class="valid1">(Only letters allowed)</span><input type="text" id="e_st_n" name="stname" class="inputsc_s" readonly></label>
+                    <br><label>Lastname*<span id="i" class="valid1">(3-15 letters)</span><span id="i1" class="valid1">(Only letters allowed)</span><input type="text" id="e_st_l" name="stlastname" class="inputsc_s" readonly></label>
+                    <br><label>Date of Birth*<input type="date" name="dob" class="inputsc_s" readonly></label>
+                    <br>Course(s) to Enroll
+                    <br><label class="st">Maths-Analysis<input type="checkbox" class="checkbox" name="ch_math" id="ch1" onclick="return false;" ></label>
+                    <label class="st">Biology-Anatomy<input type="checkbox" class="checkbox" name="ch_biology" id="ch2" onclick="return false;"></label>
+                    <label class="st">History-Ancient Years<input type="checkbox" class="checkbox" name="ch_history" id="ch3" onclick="return false;" ></label>
+                    <button type="button" class="button1" onclick="editable('inputsc_s')">Edit</button>
+                    <button type="button" class="button2" onclick="updated2()">Update</button>
+                </form>
+            </div>    
+        </section>   
+    </main>
+<script src="js/script.js"></script>
+<script src="js/script_student.js"></script>
+</body>
+</html>

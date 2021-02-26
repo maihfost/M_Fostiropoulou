@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private School</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h2>PRIVATE SCHOOL</h2>
+        <h4><span id=notbold>Education Is Your Future, Get What You Deserve!</span></h4>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>    
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <hr>
+        <aside >
+            <button class="tabbox" name="addt" onclick="openform('addtrainer','edittrainer',true)">Add<br>Trainer</button>
+            <button class="tabbox" name="editt" onclick="openform('addtrainer','edittrainer',false)" id="change_margin">Edit/Update<br>Trainer</button>
+        </aside>
+        <section class="bg_img">
+
+            <div id="addtrainer" class="tabcontent">
+                    <form method="POST">
+                        <label>Name*<span id="d" class="valid">(3-15 letters)</span><span id="d1" class="valid">(Only letters allowed)</span><input type="text" name="trname" id="nn" placeholder="Ioannis" required></label>
+                        <br><label>Lastname*<span id="e" class="valid">(4-15 letters)</span><span id="e1" class="valid">(Only letters allowed)</span><input type="text" name="trlastname" id="ln" placeholder="Papadopoulos" required></label>
+                        <br><label>Trainer's Course</label>
+                        <br><select name="cour_tr" id="train_co">
+                            <option class="option" value="no">none</option>
+                            <option class="option" value="math">Maths</option>
+                            <option class="option" value="Biology">Biology</option>
+                            <option class="option" value="History">History</option>
+                        </select>
+                    </form>
+                    <button type="submit" class="button0" onclick="submited()" >Submit</button>
+            </div>
+
+            <div id="edittrainer" class="tabcontent">
+                Select a Trainer:
+                <select name="selTrainer" id="sTrainer" onchange="check('sTrainer')" required>
+                    <option value="1">Rita Antonopoulou</option>
+                    <option value="2">Vaggelis Germanos</option>
+                    <option value="3">Loukianos Kilaidonis</option>
+                </select>
+
+                <form method="POST" name="form3" id="form_editrainer">
+                    <label>Name*<span id="f" class="valid1">(3-15 letters)</span><span id="f1" class="valid1">(Only letters allowed)</span><input class="inputst" id="e_tr_n" type="text" name="trname" readonly></label>
+                    <br><label>Lastname*<span id="g" class="valid1">(3-15 letters)</span><span id="g1" class="valid1">(Only letters allowed)</span><input class="inputst" id="e_tr_l" type="text" name="trlastname" readonly></label>
+                    <br><label>Trainer's Course</label>
+                    <br><label class="st">Maths-Analysis<input type="checkbox" class="checkbox" name="ch_math" id="ch1" onclick="return false;" ></label>
+                    <label class="st">Biology-Anatomy<input type="checkbox" class="checkbox" name="ch_biology" id="ch2" onclick="return false;"></label>
+                    <label class="st">History-Ancient Years<input type="checkbox" class="checkbox" name="ch_history" id="ch3" onclick="return false;" ></label>            
+                    <button type="button" class="button1" onclick="editable('inputst')" >Edit</button>
+                    <button type="button" class="button2" onclick="updated2()">Update</button>
+                </form>
+            </div>
+        </section>   
+    </main>
+<script src="js/script.js"></script>
+<script src="js/script_trainer.js"></script>
+</body>
+</html>

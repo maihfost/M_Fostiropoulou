@@ -1,0 +1,343 @@
+* {
+    margin:0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    width: 1295px;
+    height: 800px;
+    background-color: rgb(46, 44, 44);
+}
+
+header{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    position: relative;
+    background-color: rgb(46, 44, 44);
+    color: white;
+}
+
+h2{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 10px;
+    font-weight: normal;
+}
+h4{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-bottom:20px;
+    font-weight: normal;
+    
+}
+
+#notbold{
+    font-size: 95%;
+    font-style: italic;
+}
+
+nav{
+    height:25px;
+    background-color:rgb(218, 218, 218);
+    margin-left:250px;
+    margin-right:250px;
+    border:2px solid  rgb(46, 44, 44);
+    border-radius: 25px;
+    position: relative;
+}
+
+nav ul li{
+    float: left;
+    list-style-type: none;
+    width: 20%;
+    text-align: center;
+    padding-top:4px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:90%;
+    text-decoration: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+nav ul li a:hover{
+    color: rgb(198, 252, 111);
+}
+
+main{
+    width:100%;
+    height:800px;
+    margin-top: 9px;
+}
+
+.bgm-im {
+    background-image: url("../IMAGES/22-1536x1024.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+aside{
+    height: 775px;
+    width: 11.6%;
+    text-align: center;
+    border-right: 2px solid  rgb(218, 218, 218);
+    float: left;
+    background-color: rgb(46, 44, 44);
+    padding-top: 25px;
+}
+
+section{
+    height: 800px;
+    width: 85%;
+    align-items: center;
+    float: left;
+}
+
+.bg_img{
+    background-image: url("../IMAGES/17fatbooks-mobileMasterAt3x.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tabbox{
+    margin:0 25px 0px 25px;
+    width: 100px;
+    height:100px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 90%;
+    background-color: rgb(218, 218, 218);
+    list-style-type: none;
+    line-height: 15px;
+    border: 2px solid  rgb(32, 31, 31);
+    border-radius: 25px;
+}
+
+#change_margin{
+    margin-top: 25px;
+}
+
+.tabbox:hover{
+    background-color: rgb(105, 104, 104);
+}
+
+
+.tabcontent{
+    text-align: center;
+    border: 1px solid rgb(75, 73, 73);
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 460px;
+    margin-top: 50px;
+    margin-left: 350px;
+    max-width: 500px;
+    padding: 16px;
+    background-color: rgb(218, 218, 218);
+}
+
+.tab2{
+    text-align: center;
+    border: 1px solid rgb(75, 73, 73);
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 845px;
+    max-width: 500px;
+    padding: 16px;
+    background-color: rgb(218, 218, 218);
+} 
+
+#add_assign_co{
+    height: 250px;
+    margin-left: 50px;
+}
+
+#ed_assign_co{
+    height: 250px;
+    margin-left: 50px;
+    margin-top:340px;
+}
+
+#edit_st_co{
+    margin-top: 295px;
+    height: 295px;
+}
+
+#edit_tr_co{
+    margin-top: 50px;
+    height: 205px;
+}
+
+#addtrainer{
+    height: 300px;
+}
+#addstudent{
+    height: 360px;
+}
+
+input[type=text], input[type=date] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+#e_as_ttl,#e_as_des,#e_as_dat,#as_ttl,#as_des,#as_dat{
+    width: 90%;
+    height:30%;
+    margin-bottom: 5px;
+}
+
+#train_co{
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.button0{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    opacity: 0.9;
+}
+.button0:hover{
+    opacity: 1.2;
+}
+
+
+.button1{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    float:left;
+    border-right: 2px solid black;
+}
+
+.button1:hover{
+    opacity: 1.2;
+}
+
+.button2{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    left:20px;
+}
+
+.button2:hover{
+    opacity: 1.2;
+}
+
+
+#form_editcourse, #form_editrainer,#form_edistudent{
+    padding-top: 15px;
+    display: none;
+    padding-bottom: 20px;
+}
+
+#form_edistudent{
+    height: 350px;
+}
+
+#editcourse{
+    height:540px;
+}
+
+#edittrainer{
+    height:320px;
+}
+
+.st,.checkbox{
+    font-size:85%;
+    margin-top:15px;
+    margin-bottom:20px;
+}
+
+#editstudent{
+    height:400px;
+}
+
+#contact1{
+    position: relative;
+    width:300px;
+    height: 100px;
+    background-color:  rgb(199, 197, 197);
+    left:500px;
+    top: 100px;
+    border:2px solid rgb(32, 31, 31);
+    align-items: center;
+    margin-top:20px;
+}
+.con{
+    padding-top:10px;
+    text-align:center;
+}
+
+.valid{
+    color: #19521c;
+}
+
+.valid1{
+    color: #19521c;
+}
+
+.valid2{
+    color: #19521c;
+}
+.valid3{
+    color: #19521c;
+}
+
+.invalid{
+    color: red;
+}
+
+.invalid1{
+    color: red;
+}
+
+.invalid2{
+    color: red;
+}
+.invalid3{
+    color: red;
+}
+
+#a,#b,#c,#a1,#b1,#c1,#d,#d1,#e,#e1,#f,#f1,#g,#g1,#h,#h1,#i,#i1,#k,#l,#n,#m{
+    font-size: 70%;
+    display: none;
+}
+
+#s_co_Student{
+    margin-bottom: 27px;
+}
+
+.fl{
+    float: left;
+    width: 50%;
+}
+#yo{
+    margin-bottom: 10px;
+}

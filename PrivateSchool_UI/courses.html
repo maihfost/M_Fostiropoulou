@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private School</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h2>PRIVATE SCHOOL</h2>
+        <h4><span id=notbold>Education Is Your Future, Get What You Deserve!</span></h4>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>    
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <hr>
+        <aside>
+            <button class="tabbox" name="addc" onclick="openform('addcourse','editcourse',true)">Add<br>Course</button>
+            <button class="tabbox" name="editc" onclick="openform('addcourse','editcourse',false)" id="change_margin">Edit/Update<br>Course</button>
+        </aside>
+        <section class="bg_img">
+
+            <div id="addcourse" class="tabcontent" onsubmit="submited()">
+                    <form name="course_form"  method="POST" >
+                        <label>Title*<span id="a" class="valid">(3-12 letters)</span><span id="a1" class="valid">(Only letters allowed)</span><input type="text" name="title" id="ttl" placeholder="Biology" required></label>
+                        <br><label>Stream*<span id="b" class="valid">3-12 letters)</span><span id="b1" class="valid">(Only letters allowed)</span><input type="text" name="stream" id="str"  placeholder="Anatomy" required></label>
+                        <br><label>Type*<span id="c" class="valid">(3-12 letters)</span><span id="c1" class="valid">(Only letters allowed)</span><input type="text" name="type" id="tp" placeholder="Part Time" required></label>
+                        <br><label>Starting Date*<input type="date" name="st_date" required></label>
+                        <br><label>Ending Date*<input type="date" name="end_date" required></label>
+                        <input type="submit" class="button0" value="Submit">
+                    </form> 
+            </div>
+
+            
+            <div id="editcourse" class="tabcontent">
+                Select a course:
+                <select name="selCourse" id="sCourse" onchange="check('sCourse')" required>
+                    <option value="Math">Maths-Analysis</option>
+                    <option value="Biology">Biology-Anatomy</option>
+                    <option value="History">History-Ancient Years</option>
+                </select>
+
+                <form method="POST" name="form2" id="form_editcourse">
+                    <label>Title*<span id="d" class="valid1">(3-12 letters)</span><span id="d1" class="valid1">(Only letters allowed)</span><input class="inputsc" type="text" name="title" id="e_co_ttl" readonly></label>
+                    <br><label>Stream*<span id="e" class="valid1">(3-12 letters)</span><span id="e1" class="valid1">(Only letters allowed)</span><input class="inputsc" type="text" name="stream" id="e_co_str" readonly></label>
+                    <br><label>Type*<span id="f" class="valid1">(3-12 letters)</span><span id="f1" class="valid1">(Only letters allowed)</span><input class="inputsc" type="text" name="type" id="e_co_tp" readonly></label>
+                    <br><label>Starting Date<input  class="inputsc" type="date" name="st_date" readonly></label>
+                    <br><label>Ending Date<input class="inputsc" type="date" name="end_date" id="yo" readonly></label>
+                    <label style="font-size: 70%;">Course's Students:
+                    <select name="sel_a_Student" id="s_co_Student" onchange="select_value()">
+                        <option id="ouou"></option>
+                    </select></label>
+                    <button type="button" class="button1" onclick="editable('inputsc')" >Edit</button>
+                    <button type="button" class="button2" onclick="updated2()">Update</button>
+                </form>
+            </div>
+            
+            <div id="edit_tr_co" class="tab2">
+                <label> Trainer's Name*<span id="g" class="valid2">(3-12 letters)</span><span id="g1" class="valid2">(Only letters allowed)</span><input type="text" id="cou_tra_n" class="inputsc_t" readonly></label>
+                <br><label>Trainer's Lastname*<span id="h" class="valid2">(3-12 letters)</span><span id="h1" class="valid2">(Only letters allowed)</span><input type="text" id="cou_tra_l" class="inputsc_t" readonly></label>
+                <button type="button" class="button1" onclick="editable('inputsc_t')" >Edit</button>
+                <button type="button" class="button2" onclick="updated3()">Update</button>
+            </div>
+            
+            <div id="edit_st_co" class="tab2">
+                <form method="POST" name="form6" id="form_edistudent2">
+                    <label>Student's Name*<input class="inputsc_s" type="text" name="stname" readonly></label>
+                    <br><label>Student's Lastname*<input class="inputsc_s" type="text" name="stlastname" readonly></label>
+                    <br><label>Student's Date of Birth*<input class="inputsc_s" type="date" name="dob" readonly></label>
+                    <button type="button" class="button1" onclick="editable('inputsc_s')">Edit</button>
+                    <button type="submit" class="button2" onclick="updated()">Update</button>
+                </form>
+            </div>
+
+            <div id="add_assign_co" class="tab2">
+                <form name="assign_form"  method="POST" >
+                    <label>Assignment's Title*<span id="k" class="valid3">(3-12 letters)</span><input type="text" name="as_title" id="as_ttl" placeholder="Math ex 1" required></label>
+                    <br><label>Description*<span id="l" class="valid3">(3-30 letters)</span><input type="text" name="description" id="as_des" placeholder="Systems of linear partial differential equations" required></label>
+                    <br><label>Submision Date*<input type="date" name="sub_date" id="as_dat" required></label>
+                    <input type="button" class="button0" value="Submit" onclick="submited2()">
+                </form>
+            </div>
+
+            <div id="ed_assign_co" class="tab2">
+                <form name="assign_ed_form"  method="POST" >
+                    <label>Assignment's Title*<span id="m" class="valid3">(3-12 letters)</span><input class="inputs_as" type="text" name="as_title" id="e_as_ttl"></label>
+                    <label>Description*<span id="n" class="valid3">(3-30 letters)</span><input class="inputs_as" type="text" name="description" id="e_as_des"></label>
+                    <label>Submision Date*<input class="inputs_as" type="date" name="sub_date" id="e_as_dat" required ></label>
+                    <button type="button" class="button1" onclick="editable('inputs_as')">Edit</button>
+                    <button type="submit" class="button2" onclick="updated()">Update</button>
+                </form>
+            </div>
+        
+        </section>   
+    </main>
+<script src="js/script.js"></script>
+<script src="js/script_course.js"></script>
+</body>
+
+</html>
